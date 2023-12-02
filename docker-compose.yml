@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  postgres:
+    container_name: postgres_container
+    image: postgres:13.3
+    environment:
+      POSTGRES_DB: db
+      POSTGRES_USER: login
+      POSTGRES_PASSWORD: 12345
+    volumes:
+      - ./data:/data/postgres
+    ports:
+      - "5432:5432"
